@@ -8,8 +8,29 @@ app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 app.set('port', process.argv[2]);
 
+var bodyParser = require('body-parser');
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 app.get('/', function(req,res){
-  res.render('home')
+  var gParams = [];
+  for (var g in req.query){
+    gParams.push({'name':g,'value':req.query[g]})
+  }
+  var showGet = {};
+  showGet.values = gParams;
+  res.render('home', showGet);
+});
+
+app.post('/', function(req,res){
+  var pParams = [];
+  for (var k in req.body){
+    pParams.push({'name':k,'value':req.body[k]})
+  }
+  var showPost = {};
+  showPost.values = pParams;
+  res.render('homePost', showPost);
 });
 
 app.use(function(req,res){
