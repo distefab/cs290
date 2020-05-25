@@ -4,9 +4,11 @@ top: 0;
 width: 100%;
 }
 
-h1{
+.page-title {
+  padding-top: 50px;
   font-size: larger;
   font-weight: bold;
+  text-align: center;
   color: #000;
 }
 
@@ -41,17 +43,18 @@ background-color: #111;
 background-color: #4CAF50;
 }
 
-.slideshow {
-  max-height: 500px;
-  max-width: 100%;
-  margin: auto
-}
 
 .slide {
   display: none;
-height: 400px;
-border: solid 1px black;
+  width: 50%;
+  margin: 0 auto;
+
    
+}
+
+.image {
+  width: 1000%;
+  margin: auto;
 }
 
 .prevSlide,
@@ -65,16 +68,13 @@ border: solid 1px black;
   color: #222428;
   font-weight: bold;
   font-size: 30px;
-  transition: .6s ease;
-  border-radius: 0 3px 3px 0
+  border-radius: 3px 3px 3px 3px
 }
 
 .nextSlide {
-  right: -50px;
-  border-radius: 3px 3px 3px 3px
+  right: 10%;
 }
 
 .prevSlide {
-  left: -50px;
-  border-radius: 3px 3px 3px 3px
+  left: 10%;
 }
