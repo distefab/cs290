@@ -51,12 +51,14 @@ background-color: #4CAF50;
 
 .slide {
   display: none;
-  width: 60%;
+  width: 100%;
   margin: 0 auto;   
 }
 
 .slideshow{
   position: relative;
+  width: 300px;
+  height: 300px;
 }
 
 .image {
