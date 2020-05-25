@@ -16,8 +16,7 @@ app.use(bodyParser.json());
 
 app.get('/', function(req,res){
     
-    res.render('navbar');
-    res.render('slideshow.nbs');
+    res.render('navbar', 'slideshow');
   });
 
   app.get('/menu', function(req,res){
