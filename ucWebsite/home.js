@@ -13,7 +13,7 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use(express.static(path.join(__dirname, '/ucWebsite')));
+app.use(express.static((__dirname, '/css')));
 
 app.get('/', function(req,res){
     
