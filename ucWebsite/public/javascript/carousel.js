@@ -1,4 +1,4 @@
-var slideShow
+var slideShow = 1
 
 function slideDirection(n){
     resetTimer(timer);
