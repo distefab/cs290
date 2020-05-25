@@ -59,6 +59,7 @@ background-color: #4CAF50;
 .slideshow{
   position: relative;
   width: 60%;
+  align-content: center;
 }
 
 .image {
@@ -74,7 +75,7 @@ background-color: #4CAF50;
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: #FFFFFF;
+  color: #000000;
   font-weight: bold;
   font-size: 30px;
   border-radius: 3px 3px 3px 3px
