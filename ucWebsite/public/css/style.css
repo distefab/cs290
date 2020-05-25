@@ -4,6 +4,10 @@ top: 0;
 width: 100%;
 }
 
+body {
+  position: relative;
+}
+
 .page-title {
   padding-top: 50px;
   font-size: larger;
@@ -46,14 +50,16 @@ background-color: #4CAF50;
 
 .slide {
   display: none;
-  width: 50%;
-  margin: 0 auto;
+  width: 60%;
+  margin: 0 auto;   
+}
 
-   
+.slideshow{
+  position: relative;
 }
 
 .image {
-  width: 1000%;
+  width: 100%;
   margin: auto;
 }
 
@@ -61,20 +67,20 @@ background-color: #4CAF50;
 .nextSlide {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 40%;
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: #222428;
+  color: #FFFFFF;
   font-weight: bold;
   font-size: 30px;
   border-radius: 3px 3px 3px 3px
 }
 
 .nextSlide {
-  right: 10%;
+  right: 15%;
 }
 
 .prevSlide {
-  left: 10%;
+  left: 15%;
 }
