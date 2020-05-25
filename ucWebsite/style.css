@@ -23,6 +23,10 @@ ul {
     padding: 14px 16px;
     text-decoration: none;
   }
+
+  .menu ul li :last-child{
+      float: right;
+  }
   
   li a:hover {
     background-color: #111;
