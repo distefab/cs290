@@ -17,6 +17,22 @@ app.use(bodyParser.json());
 app.get('/', function(req,res){
     
     res.render('navbar');
+    res.render('slideshow.nbs');
+  });
+
+  app.get('/menu', function(req,res){
+    
+    res.render('navbar');
+  });
+
+  app.get('/contact', function(req,res){
+    
+    res.render('navbar');
+  });
+
+  app.get('/about', function(req,res){
+    
+    res.render('navbar');
   });
 
 app.use(function(req,res){
