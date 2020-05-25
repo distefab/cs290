@@ -1,16 +1,16 @@
 var slideShow = 1
 
 function slideDirection(n){
-    resetTimer(timer);
+    clearInterval(myTimer);
     if (n < 0){
       slideViewer(slideShow -= 1);
     } else {
      slideViewer(slideShow += 1); 
     }
     if (n === -1){
-      timer = setTimer(function(){slideDirection(n + 2)}, 4000);
+      myTimer = setInterval(function(){slideDirection(n + 2)}, 4000);
     } else {
-      timer = setTimer(function(){slideDirection(n + 1)}, 4000);
+      myTimer = setInterval(function(){slideDirection(n + 1)}, 4000);
     }
   }
 
@@ -27,5 +27,5 @@ function slideViewer(n){
 
 window.addEventListener("load",function() {
     slideViewer(slideShow);
-    timer = setTimer(function(){slideDirection(1)}, 4000);
+    myTimer = setInterval(function(){slideDirection(1)}, 4000);
 })
