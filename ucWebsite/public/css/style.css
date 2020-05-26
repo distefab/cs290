@@ -85,6 +85,16 @@ background-color: seagreen;
   border-radius: 3px 3px 3px 3px
 }
 
+.download_button {
+  background-color: rgb(169, 255, 30);
+  border: none;
+  color: #000000;
+  padding: 30px 30px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
 .nextSlide {
   right: 20%;
 }
