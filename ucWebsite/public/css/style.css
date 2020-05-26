@@ -2,6 +2,11 @@ ul {
 position: fixed;
 top: 0;
 width: 100%;
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: rgb(255, 2, 2);
 }
 
 body {
@@ -20,12 +25,8 @@ body {
   color: #000000;
 }
 
-ul {
-list-style-type: none;
-margin: 0;
-padding: 0;
-overflow: hidden;
-background-color: rgb(255, 2, 2);
+.menu-nav ul {
+  position: relative;
 }
 
 li {
