@@ -2,7 +2,7 @@ var express = require('express');
 var mysql = require('./dbcon.js');
 
 var app = express();
-var handlebars = require('express-handlebars').create({defaultLayout:'nojs',layoutsDir:"views/layouts"});
+var handlebars = require('express-handlebars').create({defaultLayout:'nojs'});
 
 
 app.engine('handlebars', handlebars.engine);
