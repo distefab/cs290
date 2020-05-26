@@ -6,7 +6,9 @@ width: 100%;
 
 body {
   position: relative;
-  background-color: seagreen;
+  background-color: #cecece;
+  margin: 0;
+  padding: 0;
 }
 
 .page-title {
@@ -15,7 +17,7 @@ body {
   font-weight: bold;
   text-align: center;
   font-family: cursive;
-  color: #000;
+  color: #000000;
 }
 
 ul {
@@ -43,10 +45,10 @@ float: right;
 }
 
 li a:hover {
-background-color: #111;
+background-color: #0000;
 }
 .active {
-background-color: #4CAF50;
+background-color: seagreen;
 }
 
 

@@ -16,22 +16,22 @@ app.use(bodyParser.json());
 
 app.get('/', function(req,res){
     
-    res.render('navbar');
+    res.render('navbar_home');
   });
 
   app.get('/menu', function(req,res){
     
-    res.render('navbar');
+    res.render('navbar_menu');
   });
 
   app.get('/contact', function(req,res){
     
-    res.render('navbar');
+    res.render('navbar_contact');
   });
 
   app.get('/about', function(req,res){
     
-    res.render('navbar');
+    res.render('navbar_about');
   });
 
 app.use(function(req,res){
