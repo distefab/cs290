@@ -130,6 +130,7 @@ background-color: seagreen;
 
 .scrolling {
   text-align: left;
-  height: 50px;
+  height: 100px;
   overflow-y: scroll;
+  background-color: darkgray;
 }
