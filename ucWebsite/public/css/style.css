@@ -27,6 +27,7 @@ body {
 
 .menu-nav ul {
   position: relative;
+  color: #cecece;
 }
 
 li {
@@ -87,12 +88,13 @@ background-color: seagreen;
 }
 
 .download_button {
-  background-color: rgb(169, 255, 30);
+  background-color: seagreen;
   border: none;
   color: #000000;
   padding: 30px 30px;
   cursor: pointer;
   font-size: 16px;
+  font-weight: bold;
 }
 
 
@@ -104,7 +106,7 @@ background-color: seagreen;
   left: 20%;
 }
 
-.menu-nav {
+.menu-div {
   position: relative;
   text-align: left;
 }
