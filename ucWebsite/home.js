@@ -26,23 +26,23 @@ app.get('/', function(req,res){
 
   app.get('/contact', function(req,res){
     
-    res.render('navbar_contact'{defaultLayout:'nojs'});
+    res.render('navbar_contact',{defaultLayout:'nojs'});
   });
 
   app.get('/about', function(req,res){
     
-    res.render('navbar_about'{defaultLayout:'nojs'});
+    res.render('navbar_about',{defaultLayout:'nojs'});
   });
 
 app.use(function(req,res){
   res.status(404);
-  res.render('404'{defaultLayout:'nojs'});
+  res.render('404',{defaultLayout:'nojs'});
 });
 
 app.use(function(err, req, res, next){
   console.error(err.stack);
   res.status(500);
-  res.render('500'{defaultLayout:'nojs'});
+  res.render('500',{defaultLayout:'nojs'});
 });
 
 app.listen(app.get('port'), function(){
