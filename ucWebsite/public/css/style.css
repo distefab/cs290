@@ -102,3 +102,13 @@ background-color: seagreen;
 .prevSlide {
   left: 20%;
 }
+
+.menu-nav {
+  position: relative;
+  text-align: left;
+}
+
+.download_button {
+  position: relative;
+  align-self: center;
+}
