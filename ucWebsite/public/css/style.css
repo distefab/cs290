@@ -27,7 +27,8 @@ body {
 
 .menu-div ul {
   position: relative;
-  color: #cecece;
+  color: black;
+  background-color: #cecece;
 }
 
 li {
@@ -118,7 +119,8 @@ background-color: seagreen;
 
 .about-div ul {
   position: relative;
-  color: #cecece;
+  color: black;
+  background-color: #cecece;
 }
 
 .about-div {
