@@ -25,7 +25,7 @@ body {
   color: #000000;
 }
 
-.menu-nav ul {
+.menu-div ul {
   position: relative;
   color: #cecece;
 }
@@ -114,4 +114,14 @@ background-color: seagreen;
 .download_button {
   position: relative;
   align-self: center;
+}
+
+.about-div ul {
+  position: relative;
+  color: #cecece;
+}
+
+.about-div {
+  position: relative;
+  text-align: center;
 }
