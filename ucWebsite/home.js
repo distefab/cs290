@@ -21,28 +21,28 @@ app.get('/', function(req,res){
 
   app.get('/menu', function(req,res){
     
-    res.render('navbar_menu');
+    res.render('navbar_menu', {layout: 'nojs'});
   });
 
   app.get('/contact', function(req,res){
     
-    res.render('navbar_contact');
+    res.render('navbar_contact'{layout: 'nojs'});
   });
 
   app.get('/about', function(req,res){
     
-    res.render('navbar_about');
+    res.render('navbar_about'{layout: 'nojs'});
   });
 
 app.use(function(req,res){
   res.status(404);
-  res.render('404');
+  res.render('404'{layout: 'nojs'});
 });
 
 app.use(function(err, req, res, next){
   console.error(err.stack);
   res.status(500);
-  res.render('500');
+  res.render('500'{layout: 'nojs'});
 });
 
 app.listen(app.get('port'), function(){
