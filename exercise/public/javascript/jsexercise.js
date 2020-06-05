@@ -1,29 +1,20 @@
 
 function edit(exerciseid){  
     var editButt = document.getElementById(exerciseid + '_editButton');
-    editButt.style.display = 'none';
-
-
     var submitButt = document.getElementById(exerciseid + '_submitButton');
-    submitButt.style.display = 'block';
-
     var thisName = document.getElementById(exerciseid + '_name');
-    thisName.style.display = 'block';    
-
     var thisReps = document.getElementById(exerciseid+ '_reps');
-    thisReps.style.display = 'block';
-
     var thisWeight = document.getElementById(exerciseid + '_weight');
-    thisWeight.style.display = 'block';
-
     var thisDate = document.getElementById(exerciseid+'_date');
-    thisDate.style.display = 'block';
-
     var thisLbs = document.getElementById(exerciseid + '_lbs');
-    thisLbs.style.display = 'block';
-
     var thisKg = document.getElementById(exerciseid + '_kg');
-    thisKg.style.display = 'block';
+    editButt.style.display = 'none'
+    submitButt.style.display = 'block';
+    thisName.style.display = 'block';    
+    thisReps.style.display = 'block';
+    thisWeight.style.display = 'block';
+    thisDate.style.display = 'block'
+
       
 
 }
