@@ -3,6 +3,7 @@ Array.from(elements).forEach(function(element) {
     element.addEventListener('click', function(event){
         
         var myId = event.currentTarget.rowId;
+        console.log(myId);
         var editButton = document.getElementById(myId + '_editButton');
         var submitButton = document.getElementById(myId + '_submitButton');
             var name = document.getElementById(myId + '_name');
@@ -19,7 +20,6 @@ Array.from(elements).forEach(function(element) {
             date.style.display = 'block';
             pounds.style.display = 'block';
             kilos.style.display = 'block';
-            console.log(myId);
             // var req = new XMLHttpRequest();  
             submitForm(myId);
             
