@@ -1,28 +1,28 @@
 <body>
 		<div class='addExercise'>
 			<h1>Add a New Exercise</h1>
-			<form method='GET' action='/insert' id='addNewExercise'>
+			<form method='GET' action='/insert'>
 				<fieldset>
-					<label>Name of Exercise:</label>
+					<label>Exercise Name:</label>
 					<div>
-					<input type='text' name='name' id='name' maxlength='60' required><br>
+					<input type='text' name='name' id='name' maxlength='60'><br>
 					</div>
-					<label>Number of Reps:</label>
+					<label>Reps:</label>
 					<div>
 					<input type='number' name='reps' min='0' max='999' id='reps'><br />
 					</div>
-					<label>Weight used:</label>
+					<label>Weight:</label>
 					<div>
 					<input type='number' name='weight' id='weight' min='0' max='1000'> <br />
 					</div>
-					<label>Date of Workout:</label>
+					<label>Date:</label>
 					<div>
 					<input type='date' name='date' id='date'><br />
 					</div>
 					<label>Pounds or Kilos:</label>
 					<div>
-					<input type='radio' name='lbs' id = 'lbs' value='1' required>lbs
-					<input type='radio' name='lbs' id = 'lbs' value='0' required>kg
+					<input type='radio' name='lbs' id = 'lbs' value='1'>lbs
+					<input type='radio' name='lbs' id = 'lbs' value='0'>kg
 					<input id='submit' type='submit' name='submitForm'>
 					</div>
 				</fieldset>
@@ -51,18 +51,19 @@
 			<tbody class='show'>
 				{{#each results}}	
 					<tr >
-						<form id='{{this.id}}' method='GET' action='/update'>
+						<form method='GET' action='/update'>
 
  							<input type='hidden' name='hidden-id' value = {{this.id}}>
  							
 							
  							 <td>
 								 <input type='text' name='name' id='{{this.id}}_name' maxlength='255'style='display: none' value={{this.name}}>
+								 <span id='cellText'>{{this.name}} </span>
 							 </td>
 						
 							 
 							 <td>
-								<input type='number' name='reps' min='1' max='999' id='{{this.id}}_reps'style='display: none' value={{this.reps}}>
+								<input type='number' name='reps' min='1' max='100' id='{{this.id}}_reps'style='display: none' value={{this.reps}}>
 								<span id='cellText'>{{this.reps}}</span>
 							 </td>
 
@@ -85,7 +86,7 @@
   							 <td> 
 								 	<button type='button' name='editButton' style='display: block'id='{{this.id}}_editButton' onclick='edit({{this.id}})'>Edit</button>
 
-									<button type='submit' name='submitButton' style='display: none'id='{{this.id}}_submitButton' onclick='submit({{this.id}})'>Submit</button>
+									<button type='submit' name='submitButton' style='display: none'id='{{this.id}}_submitButton'>Submit</button>
 
  							</td>
  						</form>
