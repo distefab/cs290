@@ -1,3 +1,27 @@
+document.getElementsByClassName("edit").addEventListener('click', function(event){
+    var myId = event.currentTarget.rowId;
+    var editButton = document.getElementById(myId + '_editButton');
+    var submitButton = document.getElementById(myId + '_submitButton');
+    var name = document.getElementById(myId + '_name');
+    var reps = document.getElementById(myId+ '_reps');
+    var weight = document.getElementById(myId + '_weight');
+    var date = document.getElementById(myId+'_date');
+    var pounds = document.getElementById(myId + '_lbs');
+    var kilos = document.getElementById(myId + '_kg');
+    editButton.style.display = 'block';
+    submitButton.style.display = 'block';
+    name.style.display = 'block';
+    reps.style.display = 'block';
+    weight.style.display = 'block';
+    date.style.display = 'block';
+    pounds.style.display = 'block';
+    kilos.style.display = 'block';
+    console.log(myId);
+    // var req = new XMLHttpRequest();  
+    // submitForm();
+    
+});
+
 function editRow(myId, myLbs){  
     //Hide Edit Button
     var editButt = document.getElementById(myId + '_editButton');
@@ -24,8 +48,6 @@ function editRow(myId, myLbs){
 
     var thisKg = document.getElementById(myId + '_kg');
     thisKg.style.display = 'block';
-
-    //Determine which radio button should be checked.
       
     submitForm();
 
@@ -33,7 +55,7 @@ function editRow(myId, myLbs){
 
 
  function submitForm(myId){
-        var thisId = documenet.getElementById(myId);
+        var thisId = document.getElementById(myId);
         var editButt = document.getElementById(myId + '_editButton');
 
         var editButt = document.getElementById(myId + '_editButton');
@@ -75,7 +97,7 @@ function editRow(myId, myLbs){
 
     var thisName = document.getElementById(myId + '_name');
     thisName.style.display = 'none';    
-    
+
     var thisReps = document.getElementById(myId+ '_reps');
     thisReps.style.display = 'none';
 
