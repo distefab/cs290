@@ -5,17 +5,27 @@
 			<form method='GET' action='/insert' id='addNewExercise'>
 				<fieldset>
 					<label>Name of Exercise:</label>
+					<div>
 					<input type='text' name='name' id='name' maxlength='60' required><br>
+					</div>
 					<label>Number of Reps:</label>
+					<div>
 					<input type='number' name='reps' min='0' max='999' id='reps'><br />
+					</div>
 					<label>Weight used:</label>
+					<div>
 					<input type='number' name='weight' id='weight' min='0' max='1000'> <br />
+					</div>
 					<label>Date of Workout:</label>
+					<div>
 					<input type='date' name='date' id='date'><br />
+					</div>
 					<label>Pounds or Kilos:</label>
+					<div>
 					<input type='radio' name='lbs' id = 'lbs' value='1' required>lbs
 					<input type='radio' name='lbs' id = 'lbs' value='0' required>kg
 					<input id='submit' type='submit' name='submitForm'>
+					</div>
 				</fieldset>
 			</form>
 		</div>
@@ -51,17 +61,18 @@
  							<!--Display Each Exercise's Information-->
  			
  							<!--Exercise Name-->
+							
  							 <td>
-								 <input type='text' name='name' id='{{this.id}}_name' maxlength='255' required style='display: none' value={{{this.name}}}>
+								 <input type='text' name='name' id={{this.id}}+ '_name' maxlength='255' required style='display: none' value={{{this.name}}}>
 								 <span id='cellText'>{{this.name}} </span>
 							 </td>
-
+							
 							 <!--Number of Reps-->
+							 
 							 <td>
 								<input type='number' name='reps' min='1' max='999' id='{{this.id}}_reps' required style='display: none' value={{this.reps}}>
 								<span id='cellText'>{{this.reps}}</span>
 							 </td>
-
 							 <!--Amount of Weight used-->
 							 <td>
 								<input type='number' name='weight' id='{{this.id}}_weight' min='1' max='9999' required style='display: none' value={{this.weight}}>
