@@ -57,7 +57,7 @@
  							
 							
  							 <td>
-								 <input type='text' name='name' id='{{this.id}} + _name' maxlength='255' required style='display: none' value={{{this.name}}}>
+								 <input type='text' name='name' id='{{this.id}}_name' maxlength='255' required style='display: none' value={{{this.name}}}>
 								 <span id='cellText'>{{this.name}} </span>
 							 </td>
 						
@@ -85,6 +85,7 @@
 
   							 <td> 
 								 	<button type='button' name='editButton' style='display: block'id='{{this.id}}_editButton' onclick='editRow({{this.id}}, {{this.lbs}})'>Edit</button>
+									<button type='button' name='submitButton' style='display: none'id='{{this.id}}_submitButton'>Submit</button>
 
  							</td>
  						</form>
