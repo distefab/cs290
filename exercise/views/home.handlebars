@@ -48,9 +48,9 @@
 			</thead>
 
 
-			<tbody class='edit'>
+			<tbody class='show'>
 				{{#each results}}	
-					<tr>
+					<tr >
 						<form id='{{this.id}}' method='GET' action='/update'>
 
  							<input type='hidden' name='hidden-id' value = {{this.id}}>
@@ -84,7 +84,7 @@
 							 </td>
 
   							 <td> 
-								 	<button type='button' name='editButton' style='display: block'id='{{this.id}}_editButton' onclick='editRow({{this.id}})'>Edit</button>
+								 	<button type='button' name='editButton' style='display: block'id='{{this.id}}_editButton' onclick='edit({{this.id}})'>Edit</button>
 
 									<button type='submit' name='submitButton' style='display: none'id='{{this.id}}_submitButton' onclick='submit({{this.id}})'>Submit</button>
 
@@ -93,7 +93,7 @@
 						<td> 
 							<form method='GET' action = '/delete'>
 							<input type="hidden" name='id' value={{this.id}}>
-							<button type='submit' id='deleteButton' onclick='deleteRow({{this.id}})' value="Delete">Delete</button>
+							<button type='submit' id='{{this.id}}_deleteButton' onclick='deleteExer({{this.id}})' value="Delete">Delete</button>
 							</form>
 						</td>
 

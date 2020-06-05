@@ -1,5 +1,5 @@
 
-function editRow(exerciseid){  
+function edit(exerciseid){  
     var editButt = document.getElementById(exerciseid + '_editButton');
     editButt.style.display = 'none';
 
@@ -60,11 +60,9 @@ function editRow(exerciseid){
   
     
  }
- function deleteRow(exerciseid){
-    var thisId = document.getElementById(exerciseid);
-
+ function deleteExer(exerciseid){
     var editButt = document.getElementById(exerciseid + '_editButton');
-    
+    editButt.style.display = "none"
 
     var submitButt = document.getElementById(exerciseid + '_submitButton');
     submitButt.style.display = 'none';

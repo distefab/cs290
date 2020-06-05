@@ -3,3 +3,7 @@
     padding: 6px;
     width: 100%;
 }
+
+.show tr:nth-child(odd){
+    background-color: white;
+}
