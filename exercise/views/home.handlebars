@@ -53,7 +53,7 @@
 			<tbody class='edit'>
 				{{#each results}}	
 					<tr>
-						<form id={{this.id}} method='GET' action='/update' style='display: none'>
+						<form id='{{this.id}}_form' method='GET' action='/update' style='display: none'>
  							<!--Make a hidden ID Value-->
 							 <!--May not need-->
  							<input type='hidden' name='hidden-id' value = {{this.id}}>
@@ -63,7 +63,7 @@
  							<!--Exercise Name-->
 							
  							 <td>
-								 <input type='text' name='name' id='{{this.id}}' + '_name' maxlength='255' required style='display: none' value={{{this.name}}}>
+								 <input type='text' name='name' id={{this.id}} + '_name' maxlength='255' required style='display: none' value={{{this.name}}}>
 								 <span id='cellText'>{{this.name}} </span>
 							 </td>
 							

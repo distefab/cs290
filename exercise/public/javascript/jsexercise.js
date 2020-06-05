@@ -3,6 +3,7 @@ Array.from(elements).forEach(function(element) {
     element.addEventListener('click', function(event){
         var exerciseid = event.target.getAttribute('rowid');
         console.log(exerciseid);
+        var form = document.getElementById(exerciseid + '_form');
         var editButton = document.getElementById(exerciseid + '_editButton');
         var submitButton = document.getElementById(exerciseid + '_submitButton');
         var name = document.getElementById(exerciseid + '_name');
