@@ -52,14 +52,10 @@
 			<tbody class='edit'>
 				{{#each results}}	
 					<tr>
-						<form id='{{this.id}}_form' method='GET' action='/update' style='display: none'>
- 							<!--Make a hidden ID Value-->
-							 <!--May not need-->
+						<form id='{{this.id}}' method='GET' action='/update' style='display: none'>
+
  							<input type='hidden' name='hidden-id' value = {{this.id}}>
  							
- 							<!--Display Each Exercise's Information-->
- 			
- 							<!--Exercise Name-->
 							
  							 <td>
 								 <input type='text' name='name' id={{this.id}} + '_name' maxlength='255' required style='display: none' value={{{this.name}}}>
@@ -75,7 +71,13 @@
 							 <!--Amount of Weight used-->
 							 <td>
 								<input type='number' name='weight' id='{{this.id}}_weight' min='1' max='9999' required style='display: none' value={{this.weight}}>
-								<span id='cellText'>{{this.weight}}</span>
+								<if {{{this.lb}}} == 1>
+									<span id='cellText'>{{this.weight}} lbs</span>
+								</if>
+								<if {{{this.lb}}} == 1>
+									<span id='cellText'>{{this.weight}} kgs</span>
+								</if>
+								
 							 </td>
 
 							 <!--Date of Exercise-->
