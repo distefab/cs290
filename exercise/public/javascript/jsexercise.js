@@ -4,13 +4,12 @@ function editRow(myId, myLbs){
     editButt.style.display = 'none';
 
 
-    //Show Submit Button
     var submitButt = document.getElementById(myId + '_submitButton');
     submitButt.style.display = 'block';
-    //Show Name form field  
+
     var thisName = document.getElementById(myId + '_name');
     thisName.style.display = 'block';    
-    //Show Reps form field
+
     var thisReps = document.getElementById(myId+ '_reps');
     thisReps.style.display = 'block';
 
@@ -36,16 +35,16 @@ function editRow(myId, myLbs){
  function submitForm(myId){
         var thisId = documenet.getElementById(myId);
         var editButt = document.getElementById(myId + '_editButton');
-        //Show Edit Button
+
         var editButt = document.getElementById(myId + '_editButton');
         editButt.style.display = 'block';
-        //Show Submit Button
+
         var submitButt = document.getElementById(myId + '_submitButton');
         submitButt.style.display = 'none';
-        //Show Name form field  
+
         var thisName = document.getElementById(myId + '_name');
         thisName.style.display = 'none';    
-        //Show Reps form field
+
         var thisReps = document.getElementById(myId+ '_reps');
         thisReps.style.display = 'none';
 
@@ -65,3 +64,34 @@ function editRow(myId, myLbs){
   
     
  }
+ function deleteRow(myId){
+    var thisId = documenet.getElementById(myId);
+
+    var editButt = document.getElementById(myId + '_editButton');
+    editButt.style.display = 'none';
+
+    var submitButt = document.getElementById(myId + '_submitButton');
+    submitButt.style.display = 'none';
+
+    var thisName = document.getElementById(myId + '_name');
+    thisName.style.display = 'none';    
+    
+    var thisReps = document.getElementById(myId+ '_reps');
+    thisReps.style.display = 'none';
+
+    var thisWeight = document.getElementById(myId + '_weight');
+    thisWeight.style.display = 'none';
+
+    var thisDate = document.getElementById(myId+'_date');
+    thisDate.style.display = 'none';
+
+    var thisLbs = document.getElementById(myId + '_lbs');
+    thisLbs.style.display = 'none';
+
+    var thisKg = document.getElementById(myId + '_kg');
+    thisKg.style.display = 'none';
+
+
+
+
+}
