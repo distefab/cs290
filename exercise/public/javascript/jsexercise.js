@@ -14,11 +14,7 @@ function edit(exerciseid){
     thisReps.style.display = 'block';
     thisWeight.style.display = 'block';
     thisDate.style.display = 'block'
-
-      
-
 }
-
 
  function submit(exerciseid){
         var editButt = document.getElementById(exerciseid + '_editButton');
@@ -33,11 +29,7 @@ function edit(exerciseid){
         thisReps.style.display = 'none';
         thisWeight.style.display = 'none';
         thisDate.style.display = 'none';
-
-
-
-  
-    
+   
  }
  function deleteExer(exerciseid){
     var editButt = document.getElementById(exerciseid + '_editButton');
