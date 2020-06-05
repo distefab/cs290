@@ -2,14 +2,13 @@
 		<table>
 			<thead>
 				<tr>
-					<th colspan='7'>Logged Exercises<th>
+					<th colspan='6'>Logged Exercises<th>
 				</tr>
 				<tr>
 					<th>Exercise Name</th>
 					<th>Number of Reps</th>
 					<th>Weight Used</th>
 					<th>Date Completed</th>
-					<th>Lbs or Kgs</th>
 					<th>Edit</th>
 					<th>Delete</th>
 				</tr>
@@ -19,46 +18,37 @@
 			<tbody class='edit'>
 				{{#each results}}	
 					<tr>
-						<form id={{this.id}} method='GET' action='/update' style='display: none'>
- 							<!--Make a hidden ID Value-->
-							 <!--May not need-->
+						<form id={{this.id}} method='GET' action='/update'>
+
  							<input type='hidden' name='hidden-id' value = {{this.id}}>
- 							
- 							<!--Display Each Exercise's Information-->
- 			
- 							<!--Exercise Name-->
-							
+
  							 <td>
 								 <input type='text' name='name' id={{this.id}} + '_name' maxlength='255' required style='display: none' value={{{this.name}}}>
 								 <span id='cellText'>{{this.name}} </span>
 							 </td>
-							
-							 <!--Number of Reps-->
-							 
+
 							 <td>
 								<input type='number' name='reps' min='1' max='999' id='{{this.id}}_reps' required style='display: none' value={{this.reps}}>
 								<span id='cellText'>{{this.reps}}</span>
 							 </td>
-							 <!--Amount of Weight used-->
+
 							 <td>
 								<input type='number' name='weight' id='{{this.id}}_weight' min='1' max='9999' required style='display: none' value={{this.weight}}>
 								<span id='cellText'>{{this.weight}}</span>
 							 </td>
 
-							 <!--Date of Exercise-->
 							 <td>
 								<input type='date' name='date' id='{{this.id}}_date' required style='display: none' value={{{this.date}}}>
 								<span id='cellText'>{{this.date}}</span>
 							 </td>
 
-							 <!--Units Used-->
+
 							 <td>
 								<input type='radio' name='lbs' id = '{{this.id}}_lbs' value='1' required style='display: none' value={{this.lbs}}>lbs</input>
 								<input type='radio' name='lbs' id = '{{this.id}}_kg' value='0' required style='display: none' >kg</input>
 								<span id='cellTextRadio'></span>
 							 </td>
 
-							 <!--Buttons-->
   							 <td> 
 								 	<button type='button' class='edit' name='editButton' rowId={{this.id}} style='display: block'id='{{this.id}}_editButton'>Edit</button>
 
@@ -66,7 +56,7 @@
  							</td>
  						</form>
 						<td> 
-							<form method='get' action = '/delete'>
+							<form method='GET' action = '/delete'>
 							<button type='button' id='deleteButton' onclick='deleteRow({{this.id}})'>Delete</button>
 							</form>
 						</td>
