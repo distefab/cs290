@@ -25,7 +25,7 @@ app.get('/', function(err, rows, fields){
       if(rows.length > 0){  
         context.results = rows;
         res.render('home',context);
-    }
+    }}
     });
 });
 
