@@ -4,7 +4,7 @@ var mysql = require('./dbcon.js');
 var app = express();
 var handlebars = require('express-handlebars').create({defaultLayout:'main'});
 var MomentHandler = require("handlebars.moment");
-MomentHandler.registerHelpers(Handlebars);
+MomentHandler.registerHelpers(handlebars);
 
 
 app.engine('handlebars', handlebars.engine);
