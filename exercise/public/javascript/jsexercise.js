@@ -29,7 +29,7 @@ function editRow(exerciseid){
 }
 
 
- function submitForm(exerciseid){
+ function submit(exerciseid){
         var editButt = document.getElementById(exerciseid + '_editButton');
 
         var editButt = document.getElementById(exerciseid + '_editButton');
