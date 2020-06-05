@@ -12,13 +12,13 @@ Array.from(elements).forEach(function(element) {
         var pounds = document.getElementById(myId + '_lbs');
         var kilos = document.getElementById(myId + '_kg');
         editButton.style.display = 'none';
-        submitButton.style.display ='block';
-        name.style.display = 'block';
-        reps.style.display = 'block';
-        weight.style.display = 'block';
-        date.style.display = 'block';
-        pounds.style.display = 'block';
-        kilos.style.display = 'block';
+        submitButton.style.display ='inline';
+        name.style.display = 'inline';
+        reps.style.display = 'inline';
+        weight.style.display = 'inline';
+        date.style.display = 'inline';
+        pounds.style.display = 'inline';
+        kilos.style.display = 'inline';
         var req = new XMLHttpRequest();  
         submitForm(myId);
             
