@@ -79,14 +79,14 @@
 							 </td>
 
 							 <td>
-								<input type='date' name='date' id='{{this.id}}_date' required style='display: none' value={{{this.date}}}>
+								<input type='date' name='date' id='{{this.id}}_date' style='display: none' value={{{this.date}}}>
 								<span id='cellText'>{{this.date}}</span>
 							 </td>
 
   							 <td> 
 								 	<button type='button' name='editButton' style='display: block'id='{{this.id}}_editButton' onclick='edit({{this.id}})'>Edit</button>
 
-									<button type='submit' name='submitButton' style='display: none'id='{{this.id}}_submitButton'>Submit</button>
+									<button type='submit' name='submitButton' style='display: none'id='{{this.id}}_submitButton' onclick='submit({{this.id}})'>Submit</button>
 
  							</td>
  						</form>
