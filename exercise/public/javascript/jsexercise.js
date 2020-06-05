@@ -1,7 +1,30 @@
 var elements = document.getElementsByClassName("edit");
 Array.from(elements).forEach(function(element) {
-    element.addEventListener('click', myFunction(event));
-  });
+    element.addEventListener('click', function(event){
+        
+        var myId = event.currentTarget.rowId;
+        var editButton = document.getElementById(myId + '_editButton');
+        var submitButton = document.getElementById(myId + '_submitButton');
+            var name = document.getElementById(myId + '_name');
+            var reps = document.getElementById(myId+ '_reps');
+            var weight = document.getElementById(myId + '_weight');
+            var date = document.getElementById(myId+'_date');
+            var pounds = document.getElementById(myId + '_lbs');
+            var kilos = document.getElementById(myId + '_kg');
+            editButton.style.display = 'block';
+            submitButton.style.display = 'block';
+            name.style.display = 'block';
+            reps.style.display = 'block';
+            weight.style.display = 'block';
+            date.style.display = 'block';
+            pounds.style.display = 'block';
+            kilos.style.display = 'block';
+            console.log(myId);
+            // var req = new XMLHttpRequest();  
+            submitForm(myId);
+            
+    }
+)});
 function myFunction(event){
     var myId = event.currentTarget.rowId;
     var editButton = document.getElementById(myId + '_editButton');
