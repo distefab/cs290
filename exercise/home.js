@@ -21,8 +21,11 @@ app.get('/', function(err, rows, fields){
       next(err);
       return;
     }
-    context.results = rows;
-    res.render('home',context);
+    else {
+      if(rows.length > 0){  
+        context.results = rows;
+        res.render('home',context);
+    }
     });
 });
 
