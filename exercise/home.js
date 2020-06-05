@@ -53,7 +53,6 @@ app.get('/insert',function(req,res,next){
     context.results = rows;  
     res.render('home',context);
   });
-  });
 });
 
 app.get('/update',function(req,res,next){
