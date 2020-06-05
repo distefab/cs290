@@ -7,3 +7,7 @@
 .show tr:nth-child(odd){
     background-color: white;
 }
+
+.show tr td input{
+    text-align: center;
+}
