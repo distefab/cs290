@@ -1,6 +1,5 @@
 
-function editRow(exerciseid, myLbs){  
-    //Hide Edit Button
+function editRow(exerciseid){  
     var editButt = document.getElementById(exerciseid + '_editButton');
     editButt.style.display = 'none';
 
@@ -26,7 +25,6 @@ function editRow(exerciseid, myLbs){
     var thisKg = document.getElementById(exerciseid + '_kg');
     thisKg.style.display = 'block';
       
-    submitForm(exerciseid);
 
 }
 
