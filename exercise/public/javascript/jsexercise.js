@@ -18,7 +18,7 @@ document.getElementsByClassName("edit").addEventListener('click', function(event
     kilos.style.display = 'block';
     console.log(myId);
     // var req = new XMLHttpRequest();  
-    // submitForm();
+    submitForm(myId);
     
 });
 
