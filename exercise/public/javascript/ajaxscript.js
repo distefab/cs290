@@ -22,13 +22,13 @@ document.addEventListener('DOMContentLoaded', bindButtons);
 
 	    
 			//Post newest entry to database	
-	    req.open('POST', 'http://flip2.engr.oregonstate.edu:5113/insert', true);
+	    req.open('POST', 'https://flip2.engr.oregonstate.edu:5113/insert', true);
 	    req.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 	    req.addEventListener('load',function(){
 	      if(req.status >= 200 && req.status < 400){
 					// Query database and get newest entry
 					var req2 = new XMLHttpRequest();
-					req2.open("GET", "http://flip2.engr.oregonstate.edu:5113/update", true);
+					req2.open("GET", "https://flip2.engr.oregonstate.edu:5113/update", true);
 					req2.addEventListener('load',function(){
 						if(req2.status >= 200 && req2.status < 400){
 
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', bindButtons);
 		var el = document.getElementById(id);
 	  el.remove(); 
 	
-		req.open("GET", "http://flip2.engr.oregonstate.edu:5113/delete?"+parms, true);
+		req.open("GET", "https://flip2.engr.oregonstate.edu:5113/delete?"+parms, true);
 	  req.send(null);
 	  event.preventDefault();
 	}
