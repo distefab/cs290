@@ -1,8 +1,8 @@
 var elements = document.getElementsByClassName("edit");
 Array.from(elements).forEach(function(element) {
     element.addEventListener('click', function(event){
-        
-        var myId = event.currentTarget.rowId;
+        event.stopPropagation();
+        var myId = event.target.getAttribute('rowid');
         console.log(myId);
         var editButton = document.getElementById(myId + '_editButton');
         var submitButton = document.getElementById(myId + '_submitButton');
@@ -114,7 +114,7 @@ function editRow(myId, myLbs){
     
  }
  function deleteRow(myId){
-    var thisId = documenet.getElementById(myId);
+    var thisId = document.getElementById(myId);
 
     var editButt = document.getElementById(myId + '_editButton');
     editButt.style.display = 'none';
