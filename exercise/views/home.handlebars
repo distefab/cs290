@@ -21,8 +21,8 @@
 					</div>
 					<label>Pounds or Kilos:</label>
 					<div>
-					<input type='checkbox' name='lbs' id = 'lbs'>lbs
-					<input type='checkbox' name='lbs' id = 'lbs'>kg
+					<input type='radio' name='lbs' id = 'lbs' value='1' required>lbs
+					<input type='radio' name='lbs' id = 'lbs' value='0' required>kg
 					<input id='submit' type='submit' name='submitForm'>
 					</div>
 				</fieldset>
@@ -69,7 +69,7 @@
 
 							 <td>
 								<input type='number' name='weight' id='{{this.id}}_weight' min='1' max='9999' required style='display: none' value={{this.weight}}>
-								{{#if this.lb}}
+								{{#if this.lbs}}
 									<span id='cellText'>{{this.weight}} lbs</span>
 								
 								{{else}}
