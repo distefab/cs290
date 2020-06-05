@@ -69,10 +69,10 @@
 
 							 <td>
 								<input type='number' name='weight' id='{{this.id}}_weight' min='1' max='9999' required style='display: none' value={{this.weight}}>
-								<if {{{this.lb}}} == 1>
+								{{#if this.lb == 1}}
 									<span id='cellText'>{{this.weight}} lbs</span>
 								</if>
-								<if {{{this.lb}}} == 0>
+								{{else}}
 									<span id='cellText'>{{this.weight}} kgs</span>
 								</if>
 								
