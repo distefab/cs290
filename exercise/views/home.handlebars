@@ -60,14 +60,13 @@
 								 <input type='text' name='name' id={{this.id}} + '_name' maxlength='255' required style='display: none' value={{{this.name}}}>
 								 <span id='cellText'>{{this.name}} </span>
 							 </td>
-							
-							 <!--Number of Reps-->
+						
 							 
 							 <td>
 								<input type='number' name='reps' min='1' max='999' id='{{this.id}}_reps' required style='display: none' value={{this.reps}}>
 								<span id='cellText'>{{this.reps}}</span>
 							 </td>
-							 <!--Amount of Weight used-->
+
 							 <td>
 								<input type='number' name='weight' id='{{this.id}}_weight' min='1' max='9999' required style='display: none' value={{this.weight}}>
 								<if {{{this.lb}}} == 1>
@@ -79,29 +78,18 @@
 								
 							 </td>
 
-							 <!--Date of Exercise-->
 							 <td>
 								<input type='date' name='date' id='{{this.id}}_date' required style='display: none' value={{{this.date}}}>
 								<span id='cellText'>{{this.date}}</span>
 							 </td>
 
-							 <!--Units Used-->
-							 <td>
-								<input type='radio' name='lbs' id = '{{this.id}}_lbs' value='1' required style='display: none' value={{this.lbs}}>lbs</input>
-								<input type='radio' name='lbs' id = '{{this.id}}_kg' value='0' required style='display: none' >kg</input>
-								<span id='cellTextRadio'></span>
-							 </td>
-
-							 <!--Buttons-->
   							 <td> 
 								 	<button type='button' name='editButton' style='display: block'id='{{this.id}}_editButton' onclick='editRow({{this.id}}, {{this.lbs}})'>Edit</button>
 
-
-									<input id='{{this.id}}_submitButton' type='submit' name='updateForm' style='display:none'>Submit</button>
  							</td>
  						</form>
 						<td> 
-							<form method='get' action = '/delete'>
+							<form method='GET' action = '/delete'>
 							<button type='button' id='deleteButton' onclick='deleteRow({{this.id}})'>Delete</button>
 							</form>
 						</td>
