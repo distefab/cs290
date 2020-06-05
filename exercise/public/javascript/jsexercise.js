@@ -13,6 +13,7 @@ Array.from(elements).forEach(function(element) {
         var pounds = document.getElementById(exerciseid + '_lbs');
         var kilos = document.getElementById(exerciseid + '_kg');
         editButton.style.display = 'none';
+        form.style.display = 'block';
         submitButton.style.display = 'block';
         name.style.display = 'block';
         reps.style.display = 'block';
