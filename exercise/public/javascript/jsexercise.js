@@ -11,16 +11,15 @@ Array.from(elements).forEach(function(element) {
         var date = document.getElementById(myId+'_date');
         var pounds = document.getElementById(myId + '_lbs');
         var kilos = document.getElementById(myId + '_kg');
-        console.log(editButton)
         editButton.style.display = 'none';
         submitButton.style.display ='block';
-        name.style.display = 'block', true;
+        name.style.display = 'block';
         reps.style.display = 'block';
         weight.style.display = 'block';
         date.style.display = 'block';
         pounds.style.display = 'block';
         kilos.style.display = 'block';
-        // var req = new XMLHttpRequest();  
+        var req = new XMLHttpRequest();  
         submitForm(myId);
             
     }
