@@ -1,5 +1,4 @@
 <body>
-	<div class='header'>
 		<div class='addExercise'>
 			<h1>Add a New Exercise</h1>
 			<form method='GET' action='/insert' id='addNewExercise'>
@@ -74,7 +73,7 @@
 								<if {{{this.lb}}} == 1>
 									<span id='cellText'>{{this.weight}} lbs</span>
 								</if>
-								<if {{{this.lb}}} == 1>
+								<if {{{this.lb}}} == 0>
 									<span id='cellText'>{{this.weight}} kgs</span>
 								</if>
 								
