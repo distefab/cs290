@@ -1,54 +1,3 @@
-var elements = document.getElementsByClassName("edit");
-Array.from(elements).forEach(function(element) {
-    element.addEventListener('click', function(event){
-        var exerciseid = event.target.getAttribute('rowid');
-        console.log(exerciseid);
-        var form = document.getElementById(exerciseid + '_form');
-        var editButton = document.getElementById(exerciseid + '_editButton');
-        var submitButton = document.getElementById(exerciseid + '_submitButton');
-        var name = document.getElementById(exerciseid + '_name');
-        var reps = document.getElementById(exerciseid+ '_reps');
-        var weight = document.getElementById(exerciseid + '_weight');
-        var date = document.getElementById(exerciseid+'_date');
-        var pounds = document.getElementById(exerciseid + '_lbs');
-        var kilos = document.getElementById(exerciseid + '_kg');
-        editButton.style.display = 'none';
-        form.style.display = 'block';
-        submitButton.style.display = 'block';
-        name.style.display = 'block';
-        reps.style.display = 'block';
-        weight.style.display = 'block';
-        date.style.display = 'block';
-        pounds.style.display = 'block';
-        kilos.style.display = 'block';
-        var req = new XMLHttpRequest();  
-        submitForm(exerciseid);
-            
-    }
-)});
-function myFunction(event){
-    var exerciseid = event.currentTarget.rowId;
-    var editButton = document.getElementById(exerciseid + '_editButton');
-    var submitButton = document.getElementById(exerciseid + '_submitButton');
-    var name = document.getElementById(exerciseid + '_name');
-    var reps = document.getElementById(exerciseid+ '_reps');
-    var weight = document.getElementById(exerciseid + '_weight');
-    var date = document.getElementById(exerciseid+'_date');
-    var pounds = document.getElementById(exerciseid + '_lbs');
-    var kilos = document.getElementById(exerciseid + '_kg');
-    editButton.style.display = 'block';
-    submitButton.style.display = 'block';
-    name.style.display = 'block';
-    reps.style.display = 'block';
-    weight.style.display = 'block';
-    date.style.display = 'block';
-    pounds.style.display = 'block';
-    kilos.style.display = 'block';
-    console.log(exerciseid);
-    // var req = new XMLHttpRequest();  
-    submitForm(exerciseid);
-    
-};
 
 function editRow(exerciseid, myLbs){  
     //Hide Edit Button
@@ -77,13 +26,12 @@ function editRow(exerciseid, myLbs){
     var thisKg = document.getElementById(exerciseid + '_kg');
     thisKg.style.display = 'block';
       
-    submitForm();
+    submitForm(exerciseid);
 
 }
 
 
  function submitForm(exerciseid){
-        var thisId = document.getElementById(exerciseid);
         var editButt = document.getElementById(exerciseid + '_editButton');
 
         var editButt = document.getElementById(exerciseid + '_editButton');
