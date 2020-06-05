@@ -91,7 +91,8 @@
  						</form>
 						<td> 
 							<form method='GET' action = '/delete'>
-							<button type='button' id='deleteButton' onclick='deleteRow({{this.id}})'>Delete</button>
+							<input type="hidden" name='id' value={{this.id}}>
+							<button type='submit' id='deleteButton' onclick='deleteRow({{this.id}})' value="Delete">Delete</button>
 							</form>
 						</td>
 

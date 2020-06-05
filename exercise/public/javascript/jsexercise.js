@@ -66,7 +66,7 @@ function editRow(exerciseid, myLbs){
     var thisId = document.getElementById(exerciseid);
 
     var editButt = document.getElementById(exerciseid + '_editButton');
-    editButt.style.display = 'none';
+    
 
     var submitButt = document.getElementById(exerciseid + '_submitButton');
     submitButt.style.display = 'none';
@@ -88,8 +88,4 @@ function editRow(exerciseid, myLbs){
 
     var thisKg = document.getElementById(exerciseid + '_kg');
     thisKg.style.display = 'none';
-
-
-
-
 }
