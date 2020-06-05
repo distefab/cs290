@@ -14,18 +14,16 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.get('/', function(err, rows, fields){
+app.get('/', function(req, res, next){
   var context = {};
   mysql.pool.query('SELECT * FROM workouts', function(err, rows, fields){
     if(err){
       next(err);
       return;
     }
-    else {
-      if(rows.length > 0){  
         context.results = rows;
         res.render('home',context);
-    }}
+    
     });
 });
 
