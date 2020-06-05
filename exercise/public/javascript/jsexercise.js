@@ -1,4 +1,8 @@
-document.getElementsByClassName("edit").addEventListener('click', function(event){
+var elements = document.getElementsByClassName("edit");
+Array.from(elements).forEach(function(element) {
+    element.addEventListener('click', myFunction(event));
+  });
+function myFunction(event){
     var myId = event.currentTarget.rowId;
     var editButton = document.getElementById(myId + '_editButton');
     var submitButton = document.getElementById(myId + '_submitButton');
@@ -20,7 +24,7 @@ document.getElementsByClassName("edit").addEventListener('click', function(event
     // var req = new XMLHttpRequest();  
     submitForm(myId);
     
-});
+};
 
 function editRow(myId, myLbs){  
     //Hide Edit Button
