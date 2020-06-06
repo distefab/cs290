@@ -4,6 +4,7 @@ var pool = mysql.createPool({
   host            : 'classmysql.engr.oregonstate.edu',
   user            : 'cs290_distefab',
   password        : '0608',
+  dateStrings     :  true,
   database        : 'cs290_distefab'
 });
 
