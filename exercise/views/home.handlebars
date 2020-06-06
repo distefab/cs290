@@ -79,7 +79,16 @@
 
 							 <td>
 								<input type='date' name='date' id='{{this.id}}_date' style='display: none' value={{{this.date}}}>
-								<span id='cellText'>'formatDate({{this.date}})'</span>
+
+								<span id='{{this.id}}_span'></span>
+								<script>
+        							var startingDate = {{this.date}};
+        							var year = startingDate.slice(0,3);
+        							var month = startingDate.slice(1,2);
+        							var day = startingDate.slice(2,3);
+        							var formattedDate = month + "-" + day + "-" + year;
+									document.getElementById('{{this.date}}_span').innerHTML = formattedDate;
+								</script>
 							 </td>
 
   							 <td> 
