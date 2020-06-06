@@ -1,3 +1,17 @@
+function formatDate(dateString){
+    if (dateString != null) {
+        var startingDate = dateString;
+        var year = startingDate.slice(0,3);
+        var month = startingDate.slice(1,2);
+        var day = startingDate.slice(2,3);
+        var formattedDate = month + "-" + day + "-" + year;
+        return formattedDate;
+    }
+    else{
+        return dateString;
+    }
+}
+
 
 function edit(exerciseid){  
     var editButt = document.getElementById(exerciseid + '_editButton');
